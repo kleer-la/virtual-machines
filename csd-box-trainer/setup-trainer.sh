@@ -1,11 +1,11 @@
 #!/bin/bash
 
-apt-get install -y openjdk-7-jre-headless
-apt-get install -y rapidsvn kdesvn meld
+#sudo apt-get install -y 
+sudo apt-get install -y default-jre
+sudo apt-get install -y rapidsvn kesvn meld
 
 # Ultima version de Jenkins
-mkdir jenkins
-cd jenkins
+mkdir jenkins && cd jenkins
 wget http://mirrors.jenkins-ci.org/war/latest/jenkins.war
 
 # arranco Jenkins

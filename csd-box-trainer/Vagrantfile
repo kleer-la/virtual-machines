@@ -35,7 +35,7 @@ Vagrant.configure(2) do |config|
     # Display the VirtualBox GUI when booting the machine
     #vb.gui = true
 
-    vb.name = "csd-box-trainer"
+    vb.name = "kleer-csd-trainer"
 
     # Customize the amount of memory on the VM:
     vb.memory = "2048"
@@ -47,5 +47,5 @@ Vagrant.configure(2) do |config|
   #config.vm.provision :shell, path: "bootstrap.sh"
 
   config.vm.provision "file", source: "./bootstrap.sh", destination: "bootstrap.sh"
-  config.vm.provision "file", source: "./atom-install.sh", destination: "atom-install.sh"
+  config.vm.provision "file", source: "./setup-trainer.sh", destination: "setup-trainer.sh"
 end
