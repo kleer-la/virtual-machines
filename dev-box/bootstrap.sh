@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get update
+sudo apt-get -y update
 
 # remove uneeded packages
 sudo apt-get remove -y vlc vlc-plugin-pulse vlc-data banshee brasero gimp gimp-data gthumb simple-scan
@@ -9,22 +9,22 @@ sudo apt-get remove -y libreoffice-calc libreoffice-impress libreoffice-draw lib
 sudo apt-get remove -y libreoffice-base-core libreoffice-common libreoffice-core libreoffice-emailmerge libreoffice-java-common
 
 #sudo apt-get upgrade -y
-sudo apt-get install -y linux-headers-$(uname -r) build-essential dkms
-sudo apt-get install -y curl git vim
 
-# atom
-sudo add-apt-repository -y ppa:webupd8team/atom
-sudo apt-get update
-sudo apt-get install -y atom
+sudo apt-get install -y curl vim
+sudo apt-get install -y software-properties-common
+sudo apt-get install -y linux-headers-$(uname -r) build-essential debhelper dkms
+sudo apt-get install -y libcurl3-dev libxml2-dev libpq-dev
 
 # rvm, ruby
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable
 source "$HOME/.rvm/scripts/rvm"
-
 rvm install 1.9
 rvm install 2.1
 
-# native extensions dependecies
-sudo apt-get install -y libcurl3-dev libxml2-dev libpq-dev
 sudo apt-get install -y gem
+sudo apt-get install -y git rapidsvn meld
+
+# Necesario para distros LXCE
+#sudo apt-get install -y gedit-common/trusty gedit/trusty gedit-plugins/trusty
+#sudo apt-get install -y rapidsvn kesvn meld git firefox

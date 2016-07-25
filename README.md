@@ -1,2 +1,66 @@
-# virtual-machines
-Some virtual machines we're using at Kleer
+# Kleer virtual machines
+
+Esta es una opción para construir los entornos de desarrollo que usamos en
+Kleer en los talleres de Desarrollo Ágile de Software (ruby, sinatra, jenkins).
+
+Dado que este script se basa en Vagrant, debes instalarlo:
+
+    sudo apt-get install vagrant
+
+Luego descargas el box en el cual se basa este Vagrant file, es una máquina 
+basada en Mint 17 y Cinnamon
+
+    vagrant box add npalm/mint17-amd64-cinnamon
+
+> ### Un Plugin interesante
+> Te recomiendo el siguiente paso que, aunque no es obligatorio, es conveniente
+> pues instala el plugin que instala o actualiza las VirtualBox Guest Additions
+> dentro de la máquina virtual.
+> 
+>     vagrant plugin install vagrant-vbguest
+
+Hasta este punto tienes Vagrant listo. Lo que sigue es clonar este repositorio 
+en tu sistema. Por ejemplo con este comando:
+
+    git clone https://github.com/kleer-la/virtual-machines.git
+
+Luego te mueves a la carpeta que contiene el Vagrantfile, por ejemplo:
+
+    cd virtual-machines/csd-box
+
+Por último, en el directorio donde encuentras el Vagrantfile, ejecutas:
+
+    vagrant up
+
+Cuando ha terminado, detienes la máquina virtual con este comando:
+
+    vagrant halt
+
+> Es importante reiniciar sesión en la VM antes de los próximos pasos, aparentemente
+> Mint realiza algunas configuraciones adicionales en el primer inicio de X.
+
+Inicia la VM desde la UI de VirtualBox
+
+> Probablemente debas desactivar el modo full-screen que parece viene activado en el box.
+
+Luego de iniciar la VM es necesario configurar la Terminal en modo login-shell,
+para eso debes iniciar una consola (Ctrl-Alt-T), click con el botón secundario
+en el área de la ventana, Profile -> Profile Preferences.
+
+Marcas el tilde "Run command as a login shell" (esto es necesario para
+que funcione rvm). Cierras el terminal y vuelves a abrirl.
+
+> ### ¿Opciones para el teclado?
+> Si tienes telclado latinoamericano, ejecuta:
+> 
+>     sudo setxkbmap latam
+>     sudo setxkbmap es
+>     sudo setxkbmap en
+
+Por último ejecutas el comando:
+
+    ./bootstrap.sh
+
+Este script tomará varios minutos. Elimina ciertos paquetes no necesarios para
+el desarrollo e instala otros, entre ellos rvm, ruby y gem.
+
