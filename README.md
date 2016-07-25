@@ -58,6 +58,8 @@ que funcione rvm). Cierras el terminal y vuelves a abrirl.
 >     sudo setxkbmap latam
 >     sudo setxkbmap es
 >     sudo setxkbmap en
+> 
+> También puedes configurar el teclado desde la UI de Cinnamon
 
 Por último ejecutas el comando:
 
