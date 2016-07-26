@@ -19,4 +19,6 @@ sudo apt-get install -y libcurl3-dev libxml2-dev libpq-dev
 
 sudo apt-get install -y git rapidsvn meld
 
+#sudo useradd kleer -p kleer -m -d /home/kleer -G sudo,nopasswdlogin
+
 su -c "source /vagrant/user-config.sh" vagrant
