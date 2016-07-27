@@ -17,7 +17,7 @@ sudo apt-get install -y software-properties-common
 sudo apt-get install -y linux-headers-$(uname -r) build-essential debhelper dkms
 sudo apt-get install -y libcurl3-dev libxml2-dev libpq-dev
 
-sudo apt-get install -y git rapidsvn meld
+sudo apt-get install -y git subversion rapidsvn meld
 
 #sudo useradd kleer -p kleer -m -d /home/kleer -G sudo,nopasswdlogin
 
