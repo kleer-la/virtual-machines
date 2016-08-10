@@ -22,6 +22,19 @@ rvm install 2.1
 sudo apt-get install -y gem
 
 mkdir ~/Repositories
+
 cd ~/Repositories
 git clone https://github.com/kleer-la/kleer-website.git
+cd kleer-website
+gem install bundler
+bundle install
+
+cd ~/Repositories
 git clone https://github.com/kleer-la/eventer.git
+cd eventer
+gem install bundler
+bundle install
+bundle exec rake db:migrate
+bundle exec rake db:seed
+RACK_ENV=test bundle exec rake db:migrate
+RACK_ENV=test bundle exec rake db:seed
