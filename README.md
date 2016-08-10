@@ -75,4 +75,10 @@ en la lista y luego opción File > Export Appliance (o similar en español).
 
 Al dia de hoy y luedo de actualizar el sistema operativo, debería quedar un archivo
 kleer-csd-box.ova de 1.9GB
- 
+
+## Temas específicos para trainers
+
+En el caso de usar esta VM para el trainer, recomiendo configurar 1.5GB de RAM
+y ejecutar el script setup-trainer.sh que instala Jenkins.
+
+También recomiendo acceder a Jenkins desde el host para ahorrar memoria en la VM.
