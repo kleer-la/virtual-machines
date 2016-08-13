@@ -55,15 +55,12 @@ Marcas el tilde "Run command as a login shell" (esto es necesario para
 que funcione rvm). Cierras el terminal y vuelves a abrirl.
 
 > ### ¿Opciones para el teclado?
-> Puedes ajustar la distribución del teclado con alguno de estos comandos:
-> 
->     sudo setxkbmap latam
->     sudo setxkbmap es
->     sudo setxkbmap en
-> 
-> También puedes configurar el teclado desde la UI de Cinnamon
+> Puedes configurar el teclado desde la UI de Cinnamon, es lo más simple. Sugiero dejar 
+> activas, al menos, la distribución en inglés de teclado y español latam.
 > 
 > Por último, puedes actualizar el sistema operativo desde las opciones usuales
+
+En caso de que desees exportar la VM desde VirtualBox
 
 Antes de cerrar la máquina virtual, en una consola ejecuta el siguiente comando para
 reducir lo máximo posible el tamaño de la máquina virtual.
