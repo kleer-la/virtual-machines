@@ -2,6 +2,8 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
+
 sudo apt-get -y update
 
 # remove uneeded packages
@@ -18,5 +20,6 @@ sudo apt-get install -y linux-headers-$(uname -r) build-essential debhelper dkms
 sudo apt-get install -y libcurl3-dev libxml2-dev libpq-dev
 
 sudo apt-get install -y git subversion rapidsvn meld
+sudo apt-get install -y sublime-text
 
 su -c "source /vagrant/user-config.sh" vagrant
