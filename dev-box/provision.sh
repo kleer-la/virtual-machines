@@ -2,7 +2,7 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 
 sudo apt-get -y update
 
