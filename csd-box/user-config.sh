@@ -23,7 +23,7 @@ rvm use $_RUBY_VERSION --default
 sudo apt-get install -y gem
 
 mkdir ~/csd && cd ~/csd
-git clone https://github.com/kleer-la/template-ruby-sinatra.git template
+git clone -b ruby2.3 https://github.com/kleer-la/template-ruby-sinatra.git template
 
 # Instalamos las gemas para que queden cacheadas
 cd template
