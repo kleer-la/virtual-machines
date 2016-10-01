@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "ubuntu/trusty32"
+  config.vm.hostname = "dev-box"
+
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 4567, host: 4567
+
+  config.vm.synced_folder "~/Repositories", "/home/vagrant/Repositories"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "dev-box-headless"
+    vb.memory = "1024"
+  end
+
+  config.vm.provision :shell, path: 'provision.sh'
+
+  # Translating git configuration from host to guest  
+  config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
+end
